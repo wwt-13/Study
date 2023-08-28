@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            "use strict";
+            // 条件分支
+            let year = prompt("This year?", 2022);
+            if (year == 2023) {
+                alert("You are right");
+            } else if (year == 1000) {
+                alert("GG");
+            } else {
+                alert("You are wrong");
+            }
+            let result = 1 > 0 ? true : false;
+            let message =
+                age < 3
+                    ? "Hi, baby!"
+                    : age < 18
+                    ? "Hello!"
+                    : age < 100
+                    ? "Greetings!"
+                    : "What an unusual age!";
+        </script>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // 类型转换
+            let value = true;
+            value = Sting(value);
+            // 在算数函数和表达式中，会自动就行number类型转换
+            alert("6" / "2");
+            let num = "123";
+            num = Number(num);
+            alert(Number("  123  ")); // 123;
+
+            // 注意下自动类型转换的顺序问题
+            alert("1" + 2 + 2); // 122
+            alert(1 + 2 + "2"); // 32
+            let a = (1 + 2, 2 + 3); // 5
+            // 逗号运算符可以处理多个表达式，每个表达式均指向，但只返回最后一个的结果
+            // 并且因为逗号优先级比等于还低，所以这里的括号是必须的
+        </script>
+    </body>
+</html>

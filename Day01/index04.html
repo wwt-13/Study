@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // alert,prompt,confirm均为模态窗，意味着用户不能与页面的其他部分（例如点击其他按钮等）进行交互，直到他们处理完窗口
+            alert("Hello");
+            // prompt(title,[default])
+            // 按下确定键得到输入结果(string),取消得到null
+            let result = prompt("How old are you?", 18);
+            console.log(result, typeof result);
+            // confirm(question),返回boolean
+            let isBoss = confirm("Are you the boss?");
+
+            // 模态窗口的限制
+            //1. 模态窗口的确切位置由浏览器决定。通常在页面中心。
+            //2. 窗口的确切外观也取决于浏览器。我们不能修改它。
+        </script>
+    </body>
+</html>

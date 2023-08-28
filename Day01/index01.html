@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <p>Test</p>
+        <!-- 内部脚本 -->
+        <script>
+            alert("Hello World!");
+        </script>
+        <!-- 外部脚本（嵌入浏览器缓存中） -->
+        <script src="./simple.js"></script>
+        <!-- 设置了src则content会被忽略 -->
+        <script src="./simple.js">
+            alert(1)
+        </script>
+        <script>
+            alert("GG");
+            [1, 2].forEach(alert);
+        </script>
+    </body>
+</html>

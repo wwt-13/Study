@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // 严格模式声明应该放在脚本的最顶部（否则无法正常启用）
+            // 严格模式平时基本用不到
+            "use strict";
+            // 创建变量（块级作用域）
+            let message;
+            message = "Hello";
+            // 多变量声明
+            let user = "john",
+                age = 120,
+                id = 20;
+            // 未声明变量直接赋值，作用域为全局作用域(容易造成全局变量污染)
+            // 该用法只在非严格模式下成立，严格模式下会直接报错（Uncaught ReferenceError: Age is not defined）
+            Age = 120;
+
+            // 常量声明
+            const myBirthday = "2002.01.03";
+            // 一般使用大写形式命名众所周知/永久不变的常量
+            const COLOR_RED = "#F00";
+        </script>
+    </body>
+</html>

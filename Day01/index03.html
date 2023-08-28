@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            //js数据类型：JavaScript是动态类型的语言，一个变量可以存储不同数据类型的数据
+            // number
+            let n = 123;
+            n = 12.3; // 浮点数
+            n = 1 / 0; // 无穷大
+            n = -Infinity; // 负无穷大
+            n = "GG" / 3;
+            n = NaN; // 计算错误
+            // BigInt
+            let N = 9007199254740992n;
+            alert(N);
+            // string
+            let s = "123";
+            s = `embd another string ${s}`;
+            alert(s);
+            // Boolean
+            let b = true;
+            b = false;
+            alert(4 > 1);
+            // null(独立类型，代表“无”、“空”、“未知”，不是什么指针)
+            let nu = null;
+            // undefined(独立类型，代表未被赋值)
+            let un;
+            alert(un);
+            // object(对象，之前的所有类型都被称为“原始类型”，因为它们的值只包含一个单独内容（字符串、数字or其他），object则用于储存数据集合这类更复杂的实体)
+            // symbol(用于创建对象的唯一标识符)
+
+            // typeof(用于数据类型检测)
+            // 需要注意的是typeof null的结果为object，这是官方承认的typeof错误，只是为了兼容性被保留了下来，null有自己的类型
+            // typeof alert的结果为function，但是实际上并不存在function这个类型，它属于object，这也是为了早期兼容性保留的错误，但在实际编程中非常方便
+            console.log(
+                typeof n,
+                typeof N,
+                typeof s,
+                typeof b,
+                typeof nu,
+                typeof un,
+                typeof Math,
+                typeof alert,
+                typeof Symbol("id")
+            );
+        </script>
+    </body>
+</html>

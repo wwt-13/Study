@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            alert(0 == "0"); // true
+            alert(0 === "0"); //严格相等性检查，false
+            alert(null == undefined); // true，非常特殊的情况
+            // 在使用数学计算或其他比较方法的时候，null会被转化为0，undefined则会被转化为NaN
+            alert(null > 0); // (1) false
+            alert(null == 0); // (2) false
+            alert(null >= 0); // (3) true(因为被转化为了0)
+            alert(undefined > 0); // false (1)
+            alert(undefined < 0); // false (2)
+            alert(undefined == 0); // false (3)
+
+            // Attention: 除非你非常清楚自己在做什么，否则永远不要使用 >= > < <= 去比较一个可能为 null/undefined 的变量。对于取值可能是 null/undefined 的变量，请按需要分别检查它的取值情况
+        </script>
+    </body>
+</html>

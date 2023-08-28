@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // 逻辑运算符
+            // 基本使用
+            let hour = 12,
+                value1,
+                value2,
+                value3;
+            if (hour < 10 || hour > 18 || hour == 100) {
+                alert("GG");
+            }
+            // 或运算寻找第一个真值(所有为假则返回最后一个假值)
+            // 处理每一个操作数时，都将其转化为布尔值。如果结果是 true，就停止计算，返回这个操作数的初始值
+            let result = value1 || value2 || value3;
+
+            let firstName = "";
+            let lastName = "";
+            let nickName = "SuperCoder";
+
+            alert(firstName || lastName || nickName || "Anonymous"); // SuperCoder
+            // 短路求值(只有在左侧等式均false时才会执行右侧等式)
+            value1 || alert("GG");
+
+            // 还有需要注意的一点是&&优先级比||高
+
+            // 与运算寻找第一个假值
+            result = value1 && value2 && value3;
+
+            // 非运算符可以用于对任意值转化为boolean类型(等价于Boolean函数)
+            alert(!!"non-empty string"); // true
+            alert(!!null); // false
+
+            // 测验
+
+            // 先输出1，然后是2(需要注意的是alert函数的返回值是undefined)
+            alert(alert(1) || 2 || alert(3));
+            // 输出3
+            alert(null || (2 && 3) || 4);
+        </script>
+    </body>
+</html>
