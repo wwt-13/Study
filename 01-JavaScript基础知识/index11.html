@@ -15,6 +15,17 @@
                 alert(message);
                 alert(parm2); // 输出undefined
             }
+            function showMessage2(text, parm2 = "GG") {}
+            function showMessage2(text, parm2) {
+                parm2 = parm2 || "No text given"; // 无法区分0,""
+                parm2 = parm2 ?? "No text given"; // 0有效时使用
+            }
+            function sum(a, b) {
+                return a + b;
+            }
+            function showMessage3() {
+                return; // 没有返回值实际返回的是undefined
+            }
 
             let temp = "GG";
             showMessage(temp);

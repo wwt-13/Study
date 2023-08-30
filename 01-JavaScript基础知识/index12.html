@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // 箭头函数:起到的作用就类似于Java中的语法糖
+            // let func=(arf1,arg2...)=>expression
+            let sum = (a, b) => a + b;
+            let double = (n) => n * 2;
+            let sayHi = () => {
+                alert("Hello");
+            }; // 原来这就是在Vue项目中看到多次的东东
+            let sum2 = (a, b) => {
+                let result = a + b;
+                return result;
+            }; // 花括号的箭头函数需要使用return显式返回结果值
+
+            // 小测试：箭头函数重写下列函数
+            function ask(question, yes, no) {
+                if (confirm(question)) yes();
+                else no();
+            }
+
+            ask(
+                "Do you agree?",
+                function () {
+                    alert("You agreed.");
+                },
+                function () {
+                    alert("You canceled the execution.");
+                }
+            );
+
+            ask(
+                "Do you agree?",
+                () => alert("You agreed."),
+                () => alert("You canceled the execution.")
+            );
+        </script>
+    </body>
+</html>
