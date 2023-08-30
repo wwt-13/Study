@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- 两者均是为了使得现代代码在不支持最新特性的旧JavaScript工作的技术 -->
+        <script>
+            // 说到名字，Babel 是最著名的转译器之一。
+            // 现代项目构建系统，例如 webpack，提供了在每次代码更改时自动运行转译器的方法，因此很容易将代码转译集成到开发过程中。
+            // 在运行转译器之前
+            height = height ?? 100;
+            // 在运行转译器之后
+            height = height !== undefined && height !== null ? height : 100;
+
+            // 转译器可以解决语法结构和运算符确实的问题，但是无法解决内建函数缺失的问题
+
+            // 例如，Math.trunc(n) 是一个“截断”数字小数部分的函数，Math.trunc(1.23) 返回 1
+            console.log(Math.trunc(1.23));
+            // 在一些古老的js引擎中根本没有该函数，由于我们谈论的是新函数，而不是语法更改，因此无需在此处转译任何内容。我们只需要声明缺失的函数
+            // 更新/添加新函数的脚本被称为“polyfill”。它“填补”了空白并添加了缺失的实现
+            if (!Math.trunc) {
+                // imply it
+                Math.trunc = (x) => (x < 0 ? Math.ceil(x) : Math.floor(x));
+            }
+        </script>
+    </body>
+</html>

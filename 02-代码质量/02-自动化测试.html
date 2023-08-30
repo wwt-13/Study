@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- mocha:核心框架，提供了通用型测试函数describe和it，以及用于运行的主函数 -->
+        <!-- add mocha css to show results -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css"
+        />
+        <!-- add mocha framework code -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+        <script>
+            // minimal setup
+            mocha.setup("bdd");
+        </script>
+
+        <!-- chai:提供了很多断言（assertion）支持的库，这里只需要用到assert.equal -->
+        <!-- add chai -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+        <script>
+            let assert = chai.assert;
+        </script>
+
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            function pow(x, n) {
+                // empty now
+                return x ** n;
+            }
+        </script>
+        <!-- the script with tests (describe, it...) -->
+        <script>
+            // 基本规范
+            // 1.describe("title",function(){...})
+            // 2.it("use case description",function(){...})
+            // 3.assert.equal(value1,value2)
+            describe("pow", function () {
+                it("2 raises to power 3 is 8", function () {
+                    assert.equal(pow(2, 3), 8);
+                });
+                it("3 raised to power 4 is 81", function () {
+                    assert.equal(pow(3, 4), 81);
+                });
+            });
+        </script>
+
+        <!-- the element with id="mocha" will contain test results -->
+        <div id="mocha"></div>
+
+        <!-- run tests -->
+        <script>
+            mocha.run();
+        </script>
+    </body>
+</html>
