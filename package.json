@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "My JavaScript Learning Records",
     "main": "index.js",
+    "type": "module",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
@@ -10,5 +11,13 @@
     "license": "ISC",
     "dependencies": {
         "lodash": "^4.17.21"
+    },
+    "devDependencies": {
+        "eslint": "^8.0.1",
+        "eslint-config-standard": "^17.1.0",
+        "eslint-plugin-import": "^2.25.2",
+        "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+        "eslint-plugin-promise": "^6.0.0",
+        "eslint-plugin-vue": "^9.17.0"
     }
 }
