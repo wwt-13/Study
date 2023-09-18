@@ -67,7 +67,7 @@ let obj = {
 };
 let m2 = new Map(Object.entries(obj));
 
-// 当然也存在反向操作，将Map转换为对象
+// 当然也存在反向操作Object.fromEntries，将Map转换为对象
 // Object.fromEntries：给定一个具有 [key, value] 键值对的数组，它会根据给定数组创建一个对象
 let obj1 = Object.fromEntries([
     [1, 'John'],

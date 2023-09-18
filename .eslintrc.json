@@ -1,0 +1,13 @@
+// 总之以后eslint配置文件统一使用json格式，以防出现.js后缀配置文件不兼容esm的bug
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "rules": {}
+}

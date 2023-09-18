@@ -47,3 +47,5 @@ let arryLike = {
 // 可以采用Array.from()方法将类数组对象转换为数组
 let arr = Array.from(arryLike);
 console.log(arr);
+
+// 需要注意的是JS对象并不是可迭代对象
